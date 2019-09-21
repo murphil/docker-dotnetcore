@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+echo >&2 "starting sshd"
+[[ -f ./setup ]] && source ./setup
+exec /usr/sbin/sshd -D -e 2>&1
