@@ -13,4 +13,5 @@ RUN apt-get update \
  && apt-get upgrade \
  && DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends openssh-server s6 \
+ && mkdir -p /var/run/sshd \
  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
