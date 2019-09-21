@@ -10,6 +10,7 @@ RUN ln -sf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
 COPY sources.list /etc/apt
 COPY s6 /etc/s6
 RUN apt-get update \
+ && apt-get upgrade \
  && DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends openssh-server s6 \
  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
