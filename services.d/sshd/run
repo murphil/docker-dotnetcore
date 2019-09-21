@@ -1,3 +1,9 @@
 #!/usr/bin/with-contenv sh
 echo >&2 "starting sshd"
+#!/usr/bin/with-contenv sh
+echo >&2 "starting sshd"
+ssh-keygen -t ecdsa -b 256 -N ""
+echo '------ ssh key ------'
+cat $HOME/.ssh/id_ecdsa
+echo '---------------------'
 exec /usr/sbin/sshd -D -e 2>&1
