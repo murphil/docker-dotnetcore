@@ -1,2 +1,2 @@
 img:
-    docker build . -t dotnetcore --progress=plain
+    docker build . -t nnurphy/dotnetcore --progress=plain

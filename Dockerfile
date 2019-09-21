@@ -13,3 +13,5 @@ RUN ln -sf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
  && curl --fail --silent -L https://github.com/just-containers/s6-overlay/releases/download/v1.22.1.0/s6-overlay-amd64.tar.gz | \
     tar xzvf - -C /
+
+ENTRYPOINT [ "/init" ]
