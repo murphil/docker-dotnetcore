@@ -39,7 +39,7 @@ RUN dotnet_sdk_version=2.2.207 \
     # Trigger first run experience by running arbitrary cmd
     && dotnet help
 
-ENV just_version=0.7.1
+ENV just_version=0.7.2
 ENV watchexec_version=1.14.0
 ENV yq_version=3.3.2
 ENV websocat_version=1.6.0
